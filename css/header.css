@@ -110,7 +110,7 @@
 
 /* === Бургер === */
 .burger {
-  display: none;
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 28px;
@@ -190,5 +190,7 @@
     }
     
   /* Заборона прокрутки під час відкритого меню */
-  
+  body.menu-open {
+    overflow: hidden;
+  }
 }
