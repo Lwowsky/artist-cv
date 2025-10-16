@@ -126,14 +126,14 @@
   height: 100vh;
 }
 .burger span {
-  display: block;
+  display: flex;
   height: 3px;
   background: #fff;
   border-radius: 2px;
   transition: all 0.3s ease;
-  margin: 3px 0;
+  overflow: visible;
+  visibility: visible;
 }
-
 
 /* === Анімація бургер → хрестик === */
 .burger.active span:nth-child(1) {
@@ -179,7 +179,15 @@
     
     z-index: 1100;
   }
-
+  .burger span {
+    display: flex;
+    height: 3px;
+    background: #fff;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    overflow: visible;
+    visibility: visible;
+    }
   /* Заборона прокрутки під час відкритого меню */
   body.menu-open {
     overflow: hidden;
