@@ -181,7 +181,7 @@
     height: 22px;
     
   }
-  .burger span {
+  #burger span {
     display: flex;
     height: 3px;
     background-color: #ba2828;
