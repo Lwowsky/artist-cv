@@ -125,7 +125,7 @@
   overflow: hidden; /* блокує прокрутку сторінки */
   height: 100vh;
 }
-.burger span {
+.burger .burger-menu {
   display: flex;
   height: 3px;
   background: #fff;
@@ -178,7 +178,7 @@
     z-index: 2000;
   }
   .burger span {
-    display: block;
+    display: flex;
     height: 3px;
     background: #fff;
     border-radius: 2px;
