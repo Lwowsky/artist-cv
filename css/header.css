@@ -180,13 +180,24 @@
     z-index: 1100;
   }
   .burger span {
-    display: block;
+    display: flex;
     height: 3px;
     background: #fff;
     border-radius: 2px;
     transition: all 0.3s ease;
-    margin: 3px 0;
-  }
+    overflow: visible;
+    visibility: visible;
+    }
+    .burger.active span:nth-child(1) {
+  transform: rotate(45deg) translateY(8px);
+}
+.burger.active span:nth-child(2) {
+  opacity: 0;
+}
+.burger.active span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-8px);
+}
+
   /* Заборона прокрутки під час відкритого меню */
   body.menu-open {
     overflow: hidden;
