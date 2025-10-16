@@ -1,3 +1,12 @@
+<script>
+  const burger = document.getElementById("burger");
+  const menu = document.querySelector(".menu");
+  burger.addEventListener("click", () => {
+    burger.classList.toggle("active");
+    menu.classList.toggle("active");
+    document.body.classList.toggle("no-scroll");
+  });
+</script>
 <header class="header">
   <div class="header-container">
     <div class="header-logo">
