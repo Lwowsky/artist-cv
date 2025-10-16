@@ -171,17 +171,13 @@
      }
 
   .burger {
-    display: flex !important;
-    color: white;
+    display: flex;
+    color: white;   
     opacity: 1;
-    position: absolute;
-    top: 25px;
-    right: 20px;
-    z-index: 1100;
   }
 
   /* Заборона прокрутки під час відкритого меню */
   body.menu-open {
-    overflow: hidden;
+    overflow: visible;
   }
 }
