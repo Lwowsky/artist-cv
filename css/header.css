@@ -178,14 +178,13 @@
     z-index: 2000;
   }
   .burger span {
-    display: flex;
+    display: block;
     height: 3px;
-    color: #fff;
+    background: #fff;
     border-radius: 2px;
     transition: all 0.3s ease;
-    overflow: visible;
-    visibility: visible;
-    }
+    margin: 3px 0;
+  }
     
   /* Заборона прокрутки під час відкритого меню */
   body.menu-open {
