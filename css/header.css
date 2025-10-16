@@ -14,10 +14,12 @@
   
   opacity: 0.8;
   transition: opacity 0.3s ease;
-   &:hover {
+  }
+
+  .header:hover {
     opacity: 1;
   }
-}
+
 
 /* Градієнтна лінія як у footer */
 .header::after {
