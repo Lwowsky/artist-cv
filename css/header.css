@@ -175,8 +175,7 @@
     display: flex !important;
     color: white;   
     opacity: 1;
-    position: fixed;
-    z-index: 1000;
+    z-index: 2000;
   }
   .burger span {
     display: flex;
