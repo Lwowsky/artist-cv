@@ -168,7 +168,8 @@
   }
 
   .burger {
-    display: inline-flex;
+    display: flex;
+    overflow: visible;
   }
 
   /* Заборона прокрутки під час відкритого меню */
