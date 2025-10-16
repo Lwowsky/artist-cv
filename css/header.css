@@ -186,6 +186,7 @@
     transition: all 0.3s ease;
     overflow: visible;
     visibility: visible;
+    position: absolute;
     }
     
   /* Заборона прокрутки під час відкритого меню */
