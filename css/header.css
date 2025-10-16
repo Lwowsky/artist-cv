@@ -14,12 +14,10 @@
   
   opacity: 0.8;
   transition: opacity 0.3s ease;
-  }
-
-  .header:hover {
+   &:hover {
     opacity: 1;
   }
-
+}
 
 /* Градієнтна лінія як у footer */
 .header::after {
@@ -173,6 +171,7 @@
   .burger {
     display: flex;
     color: white;   
+    opacity: 1;
   }
 
   /* Заборона прокрутки під час відкритого меню */
