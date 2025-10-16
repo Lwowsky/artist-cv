@@ -99,7 +99,7 @@
 
 @keyframes fadeInUp {
   from {
-    opacity: 0;
+    opacity: 1;
     transform: translateY(20px);
   }
   to {
@@ -110,7 +110,7 @@
 
 /* === Бургер === */
 .burger {
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: space-between;
   width: 28px;
