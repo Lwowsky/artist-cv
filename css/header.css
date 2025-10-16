@@ -11,7 +11,7 @@
   color: #fff;
   padding: 0.5rem 1.5rem 1.5rem;
   position: relative;
-  overflow: visible;
+  
   opacity: 0.8;
   transition: opacity 0.3s ease;
   &:hover {
@@ -169,7 +169,7 @@
 
   .burger {
     display: flex;
-    overflow: visible;
+   
   }
 
   /* Заборона прокрутки під час відкритого меню */
