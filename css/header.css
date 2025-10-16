@@ -179,7 +179,7 @@
     
   }
   .burger span {
-    display: flex;
+    display: flex !important;
     height: 3px;
     background-color: #fff;
     border-radius: 2px;
