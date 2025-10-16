@@ -173,12 +173,10 @@
      }
 
   .burger {
-    display: flex;
+    display: flex !important;
     color: white;   
     opacity: 1;
-    position: absolute;
-    top: 25px;
-    right: 20px;
+    
     z-index: 1100;
   }
 
