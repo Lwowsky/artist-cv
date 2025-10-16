@@ -129,7 +129,7 @@
   background: #fff;
   border-radius: 2px;
   transition: all 0.3s ease;
-  overflow: visible;
+  overflow: hidden;
 }
 
 /* === Анімація бургер → хрестик === */
@@ -168,7 +168,7 @@
   }
 
   .burger {
-    display: flex;
+    display: inline-flex;
   }
 
   /* Заборона прокрутки під час відкритого меню */
