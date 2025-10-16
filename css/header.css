@@ -108,7 +108,7 @@
 
 /* === Бургер === */
 .burger {
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: space-between;
   width: 28px;
@@ -167,7 +167,7 @@
   }
 
   .burger {
-    display: none;
+    display: flex;
   }
 
   /* Заборона прокрутки під час відкритого меню */
