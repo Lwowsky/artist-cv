@@ -149,7 +149,7 @@
 /* === Мобільне меню === */
 @media (max-width: 768px) {
   .menu {
-    display: none;
+    display: flex;
     position: fixed;
     top: 0;
     left: 0;
@@ -173,7 +173,7 @@
 }
 
   .burger {
-    display: flex !important;
+    display: flex;
     color: white;   
     opacity: 1;
     z-index: 2000;
