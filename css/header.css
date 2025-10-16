@@ -11,9 +11,6 @@
   color: #fff;
   padding: 0.5rem 1.5rem 1.5rem;
   position: relative;
-  
-  opacity: 0.8;
-  transition: opacity 0.3s ease;
   }
 
   .header:hover {
@@ -39,21 +36,15 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 90px;
   max-width: 1200px;
   margin: 0 auto;
-  position: relative;
-  z-index: 2;
 }
 
 /* === Лого === */
 .header-logo {
   width: 270px;
   height: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 50px;
+
 }
 .header-logo img {
   max-width: 100%;
