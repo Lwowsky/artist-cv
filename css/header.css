@@ -149,6 +149,7 @@
 /* === Мобільне меню === */
 @media (max-width: 768px) {
   .menu {
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
