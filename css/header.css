@@ -115,7 +115,7 @@
   justify-content: space-between;
   width: 28px;
   height: 20px;
-  background: transparent;
+  background: rgba(255, 0, 0, 0.3);
   border: none;
   cursor: pointer;
   z-index: 9999;
