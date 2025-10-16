@@ -168,6 +168,7 @@
     transform: translateY(0);
     opacity: 1;
     display: flex;
+    color: white;
      }
 
   .burger {
@@ -178,6 +179,6 @@
 
   /* Заборона прокрутки під час відкритого меню */
   body.menu-open {
-    overflow: visible;
+    overflow: hidden;
   }
 }
