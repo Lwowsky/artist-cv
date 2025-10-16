@@ -1,0 +1,9 @@
+@import url("style.css");
+@import url("header.css");
+@import url("footer.css");
+@import url("main-container.css");
+
+
+.main {
+    padding: 50px 0;
+}

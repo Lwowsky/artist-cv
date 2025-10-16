@@ -1,0 +1,33 @@
+<script>
+  const burger = document.getElementById("burger");
+  const menu = document.querySelector(".menu");
+
+  burger.addEventListener("click", () => {
+    burger.classList.toggle("active");
+    menu.classList.toggle("active");
+    document.body.classList.toggle("no-scroll");
+      });
+</script>
+<header class="header">
+  <div class="header-container">
+    <div class="header-logo">
+        <img src="icons/logo4.png" alt="">
+    </div>
+
+    <nav class="header-nav">
+      <ul class="menu">
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Galery</a></li>
+        <li><a href="#">Video</a></li>
+        <li><a href="#">Contact us</a></li>
+      </ul>
+    </nav>
+
+    <button class="burger" id="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+
+  </header>

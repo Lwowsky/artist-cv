@@ -1,0 +1,92 @@
+.footer {
+  background-color: #020508;
+  color: #fff;
+  padding: 0.5rem 1.5rem  0.5rem 1.5rem;
+  position: relative;
+  margin-bottom: -100px;
+  margin-top: 1px;
+  overflow: hidden;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #9f3b32, transparent);
+  opacity: 0.8;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: -10px auto -10px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding-bottom: -100px;
+ }
+
+/* === Logo section === */
+.footer-logo {
+  flex: 1 1 250px;
+  text-align: center;
+}
+
+.footer-logo img {
+  max-width: 270px;
+  margin-bottom: 1rem;
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.2));
+  transition: transform 0.3s ease;
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.footer-logo p {
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+/* === Social icons === */
+.footer-socials {
+  flex: 1 1 250px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 2rem;
+}
+
+.footer-socials a {
+  color: white;
+  font-size: 1.6rem;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.footer-socials a:hover {
+  transform: scale(1.2);
+  opacity: 0.8;
+  color: #9f3b32;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-socials {
+    margin-top: -13rem;
+    
+  }
+}

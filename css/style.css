@@ -1,0 +1,63 @@
+@import url("index.css");
+
+@import url("https://fonts.googleapis.com/css2?family=DotGothic16&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+    scroll-behavior: smooth;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+
+.container {
+	max-width: 1170px;
+	margin: 0 auto;
+}
+/* === Космічний фон === */
+body {
+  background: radial-gradient(ellipse at bottom, #0d1b2a 0%, #000 100%);
+  color: #fff;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Створюємо шари зірок */
+body::before, body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background-repeat: repeat;
+  background-image: radial-gradient(2px 2px at 20px 20px, #fff, transparent),
+                    radial-gradient(1px 1px at 40px 60px, #9f3b32, transparent),
+                    radial-gradient(1px 1px at 130px 80px, #fff, transparent),
+                    radial-gradient(2px 2px at 200px 150px, #fff, transparent);
+  background-size: 250px 250px;
+  animation: moveStars 100s linear infinite;
+  opacity: 0.4;
+  z-index: -2;
+}
+
+body::after {
+  animation-duration: 180s;
+  opacity: 0.6;
+  transform: scale(1.5);
+}
+
+@keyframes moveStars {
+  from { transform: translateY(0); }
+  to { transform: translateY(-1000px); }
+}
