@@ -117,6 +117,7 @@
   border: none;
   cursor: pointer;
   z-index: 1100;
+  position: relative;
 }
 .no-scroll {
   overflow: hidden; /* блокує прокрутку сторінки */
@@ -167,7 +168,7 @@
   }
 
   .burger {
-    display: block;
+    display: flex;
   }
 
   /* Заборона прокрутки під час відкритого меню */
