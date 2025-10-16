@@ -176,7 +176,7 @@
     color: white;   
     opacity: 1;
     z-index: 2000;
-    position: absolute;
+    
   }
   .burger span {
     display: flex;
@@ -186,11 +186,9 @@
     transition: all 0.3s ease;
     overflow: visible;
     visibility: visible;
-    position: absolute;
+    
     }
     
   /* Заборона прокрутки під час відкритого меню */
-  body.menu-open {
-    overflow: hidden;
-  }
+  
 }
