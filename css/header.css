@@ -181,13 +181,13 @@
     height: 22px;
     
   }
-  #burger span {
+  .burger span {
     display: flex;
     height: 3px;
     background-color: #ba2828;
     border-radius: 2px;
     transition: all 0.3s ease;
-    
+    position: relative;
     
     }
     
