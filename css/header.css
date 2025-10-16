@@ -108,29 +108,34 @@
   }
 }
 
-//* === Бургер === */
+/* === Бургер === */
 .burger {
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: space-between;
   width: 28px;
   height: 20px;
-  background: transparent;
+  background: red;
   border: none;
   cursor: pointer;
   z-index: 9999;
   position: relative;
 }
-
+.no-scroll {
+  overflow: hidden; /* блокує прокрутку сторінки */
+  height: 100vh;
+}
 .burger span {
-  display: block;
+  display: flex;
   height: 3px;
   background: #fff;
   border-radius: 2px;
   transition: all 0.3s ease;
+  overflow: visible;
+  visibility: visible;
 }
 
-/* Анімація бургер → хрестик */
+/* === Анімація бургер → хрестик === */
 .burger.active span:nth-child(1) {
   transform: rotate(45deg) translateY(8px);
 }
@@ -141,7 +146,7 @@
   transform: rotate(-45deg) translateY(-8px);
 }
 
-/* Мобільне меню */
+/* === Мобільне меню === */
 @media (max-width: 768px) {
   .menu {
     position: fixed;
@@ -161,12 +166,34 @@
   }
 
   .menu.active {
-    transform: translateY(0);
-    opacity: 1;
-  }
+  transform: translateY(0);
+  opacity: 1;
+  display: flex;
 }
 
-/* Приховуємо бургер лише на великих екранах */
+  .burger {
+    display: flex !important;
+    color: white;   
+    opacity: 1;
+    z-index: 2000;
+    
+  }
+  .burger span {
+    display: flex;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    overflow: visible;
+    visibility: visible;
+    
+    }
+    
+  /* Заборона прокрутки під час відкритого меню */
+  body.menu-open {
+    overflow: hidden;
+  }
+}
 @media (min-width: 769px) {
   .burger {
     display: none;
