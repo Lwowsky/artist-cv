@@ -19,7 +19,7 @@
   .header:hover {
     opacity: 1;
   }
-}
+
 
 /* Градієнтна лінія як у footer */
 .header::after {
