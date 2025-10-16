@@ -180,7 +180,7 @@
   .burger span {
     display: flex;
     height: 3px;
-    background: #fff;
+    background-color: #fff;
     border-radius: 2px;
     transition: all 0.3s ease;
     overflow: visible;
