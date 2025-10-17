@@ -125,7 +125,7 @@
   .burger span {
     display: flex;
     height: 3px;
-    background-color: #ba2828;
+    background-color: #9f3b32;
     border-radius: 2px;
     transition: all 0.3s ease;
   }
