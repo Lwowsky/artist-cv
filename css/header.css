@@ -7,7 +7,7 @@
 
 /* === Header === */
 .header {
-  background-color: #020508;
+  background-color: transparent;
   color: #fff;
   padding: 1rem 1.5rem;
   position: relative;
@@ -148,9 +148,9 @@
   }
 
   .menu a {
-    font-size: 1.5rem; /* або 18px, як тобі зручно */
+    font-size: 1.5rem;
     letter-spacing: 1px;
-    text-transform: uppercase; /* (опціонально — стильніше виглядає) */
+    text-transform: uppercase;
   }
 
   .menu.active {
