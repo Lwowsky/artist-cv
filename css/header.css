@@ -15,7 +15,7 @@
   transition: opacity 0.3s ease;
   }
 
-  .header:hover {
+.header:hover {
     opacity: 1;
   }
 
@@ -48,7 +48,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
+  margin-top: 0;
 }
 .header-logo img {
   max-width: 100%;
