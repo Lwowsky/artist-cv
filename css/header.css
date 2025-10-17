@@ -118,6 +118,8 @@
 @media (max-width: 768px) {
   .burger {
     display: flex;
+    width: 30px;
+    height: 22px;
   }
 
   .burger span {
@@ -143,6 +145,12 @@
     opacity: 0;
     transition: transform 0.4s ease, opacity 0.4s ease;
     z-index: 1500;
+  }
+
+  .menu a {
+    font-size: 1.5rem; /* або 18px, як тобі зручно */
+    letter-spacing: 1px;
+    text-transform: uppercase; /* (опціонально — стильніше виглядає) */
   }
 
   .menu.active {
