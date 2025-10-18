@@ -5,7 +5,6 @@
   font-family: "Inter", sans-serif;
 }
 
-/* === Header === */
 .header {
   background-color: transparent;
   padding: 1rem 1.5rem;
@@ -26,7 +25,7 @@
   width: 80%;
   height: 1px;
   background: linear-gradient(90deg, transparent, #9f3b32, transparent);
-  opacity: 0.8;
+  opacity: 1;
 }
 
 .header-container {
@@ -39,7 +38,6 @@
   line-height: 90px;
 }
 
-/* === Logo === */
 .header-logo {
   width: 270px;
   height: auto;
@@ -48,20 +46,22 @@
   align-items: center;
   margin-top: 0;
 }
+
 .header-logo img {
   max-width: 100%;
   height: auto;
   filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.2));
   transition: transform 0.3s ease;
 }
+
 .header-logo img:hover {
   transform: scale(1.05);
 }
+
 .mobile-socials {
   display: none; 
 }  
 
-/* === Menu === */
 .menu {
   display: flex;
   list-style: none;
@@ -81,7 +81,6 @@
   transform: translateY(-2px);
 }
 
-/* === Burger === */
 .burger {
   display: none;
   flex-direction: column;
@@ -103,7 +102,6 @@
   transition: all 0.3s ease;
 }
 
-/* === Анімація бургер → хрестик === */
 .burger.active span:nth-child(1) {
   transform: translateY(8px) rotate(45deg);
 }
@@ -114,8 +112,6 @@
   transform: translateY(-8px) rotate(-45deg);
 }
 
-
-/* === Mobile === */
 @media (max-width: 768px) {
   .burger {
     display: flex;

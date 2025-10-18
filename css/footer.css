@@ -1,10 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Inter", sans-serif;
-}
-
 .footer {
   background-color: transparent;
   transition: opacity 0.3s ease;
@@ -23,7 +16,7 @@
   width: 80%;
   height: 1px;
   background: linear-gradient(90deg, transparent, #9f3b32, transparent);
-  opacity: 0.8;
+  opacity: 1;
 }
 
 .footer-container {
@@ -92,13 +85,14 @@
     width: 270px;  
     height: auto; 
     justify-content: center;
+    padding-top: 1rem;
  
   }
 
   .footer-socials {
     display: flex;
-    margin: 0; 
-    padding-bottom: 30px;
+    padding-bottom: 2rem; 
+    margin-top: 0;
     gap: 2.5rem;
     justify-content: center;
   }
