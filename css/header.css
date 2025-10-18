@@ -7,15 +7,14 @@
 
 /* === Header === */
 .header {
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0);
   padding: 1rem 1.5rem;
   position: relative;
-  opacity: 0.8;
-  transition: opacity 0.3s ease;
+  transition: background-color 0.3s ease;
   }
 
 .header:hover {
-    opacity: 1;
+  background-color: rgba(0, 0, 0, 0);
 }
 
 .header::after {
@@ -145,7 +144,7 @@
     width: 100%;
     height: 100vh;
     transform: translateY(-100%);
-    opacity: 1;
+    opacity: 0;
     transition: transform 0.4s ease, opacity 0.4s ease;
     z-index: 1500;
   }
