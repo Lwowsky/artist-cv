@@ -1,7 +1,6 @@
 .main-content {
   font-style: italic;
   font-weight: bold;
-  font-variant: small-caps;
   flex: 1;
   background: #0b132b;
   padding: 3rem 1.5rem;
@@ -99,7 +98,7 @@
   color: #333;
   font-size: 2.5rem;
   .about-me {
-    font-size: 18px;
+    font-size: 16px;
     }
  }
 .main-portfolio__title {
@@ -131,6 +130,8 @@
 .main-portfolio__review {
  li {
   color: #9f3b32;
+  font-size: 15px;
+  font-weight: bold;
   }
  } 
 
@@ -139,4 +140,11 @@
   color: #f0b035;
   text-align: center;
   margin-bottom: 2rem;
+ }
+
+ .main-portfolio__review--right {
+  li {
+    font-size: 15px;
+    font-weight: bold;
+  }
  }
