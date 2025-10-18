@@ -1,3 +1,4 @@
+/* === RESET === */
 * {
   margin: 0;
   padding: 0;
@@ -5,17 +6,16 @@
   font-family: "Inter", sans-serif;
 }
 
-/* === Header === */
+/* === HEADER === */
 .header {
   background-color: transparent;
   padding: 1rem 1.5rem;
   position: relative;
-  opacity: 0.8;
-  transition: opacity 0.3s ease;
-  }
+  transition: background-color 0.3s ease;
+}
 
 .header:hover {
-    opacity: 1;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .header::after {
@@ -40,14 +40,13 @@
   line-height: 90px;
 }
 
-/* === Logo === */
+/* === LOGO === */
 .header-logo {
   width: 270px;
   height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 0;
 }
 .header-logo img {
   max-width: 100%;
@@ -58,11 +57,8 @@
 .header-logo img:hover {
   transform: scale(1.05);
 }
-.mobile-socials {
-  display: none; 
-}  
 
-/* === Menu === */
+/* === MENU (desktop) === */
 .menu {
   display: flex;
   list-style: none;
@@ -82,7 +78,11 @@
   transform: translateY(-2px);
 }
 
-/* === Burger === */
+.mobile-socials {
+  display: none;
+}
+
+/* === BURGER BUTTON === */
 .burger {
   display: none;
   flex-direction: column;
@@ -92,7 +92,7 @@
   background: none;
   border: none;
   cursor: pointer;
-  z-index: 2000;
+  z-index: 2001;
   position: relative;
 }
 
@@ -105,7 +105,7 @@
   transition: all 0.3s ease;
 }
 
-/* === Анімація бургер → хрестик === */
+/* === Burger → X animation === */
 .burger.active span:nth-child(1) {
   transform: translateY(8px) rotate(45deg);
 }
@@ -116,9 +116,9 @@
   transform: translateY(-8px) rotate(-45deg);
 }
 
-
-/* === Mobile === */
+/* === MOBILE STYLES === */
 @media (max-width: 768px) {
+  /* burger visible */
   .burger {
     display: flex;
     width: 30px;
@@ -126,16 +126,13 @@
   }
 
   .burger span {
-    display: flex;
-    height: 3px;
     background-color: #9f3b32;
     border-radius: 2px;
-    transition: all 0.3s ease;
   }
 
+  /* full-screen menu */
   .menu {
     position: fixed;
-    display: flex;
     top: 0;
     left: 0;
     flex-direction: column;
@@ -148,7 +145,12 @@
     transform: translateY(-100%);
     opacity: 0;
     transition: transform 0.4s ease, opacity 0.4s ease;
-    z-index: 1500;
+    z-index: 9999;
+  }
+
+  .menu.active {
+    transform: translateY(0);
+    opacity: 1;
   }
 
   .menu a {
@@ -157,20 +159,18 @@
     text-transform: uppercase;
   }
 
-  .menu.active {
-    transform: translateY(0);
-    opacity: 1;
-  }
-
+  /* body scroll lock when open */
   body.no-scroll {
     overflow: hidden;
     height: 100vh;
   }
+
+  /* socials inside menu */
   .mobile-socials {
     display: flex;
     justify-content: center;
     gap: 2rem;
-    margin-top: 3rem
+    margin-top: 3rem;
   }
 
   .mobile-socials a {
@@ -185,4 +185,3 @@
     opacity: 0.8;
   }
 }
-
