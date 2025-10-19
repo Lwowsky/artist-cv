@@ -77,9 +77,8 @@
 @media (max-width: 768px) {
   .video-display iframe {
     height: 220px;
-    max-width: 70%%;
-    
-    width: auto;
+    max-width: 50%;
+    width: 100%;
   }
 
   .thumbnail {
