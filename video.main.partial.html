@@ -1,58 +1,39 @@
-<script>
-const videos = document.querySelectorAll('.video-wrapper');
-const nextBtn = document.querySelector('.carousel-btn.next');
-const prevBtn = document.querySelector('.carousel-btn.prev');
-
-let index = 0;
-
-function showVideo(i) {
-  videos.forEach((vid, n) => {
-    vid.classList.toggle('active', n === i);
-  });
-}
-
-nextBtn.addEventListener('click', () => {
-  index = (index + 1) % videos.length;
-  showVideo(index);
-});
-
-prevBtn.addEventListener('click', () => {
-  index = (index - 1 + videos.length) % videos.length;
-  showVideo(index);
-});
-
-// Автоперемикання
-setInterval(() => {
-  index = (index + 1) % videos.length;
-  showVideo(index);
-}, 8000);
-</script>
-
 <main class="container">
   <div class="main-content">
     <div class="content-box">
       <h1 class="main-content__title">Video</h1>
 
       <div class="video-carousel">
-        <div class="video-wrapper active">
+        <!-- Головне відео -->
+        <div class="video-display">
           <h2 class="video-title">Crazy Flight</h2>
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/Lm94VMX22G4?si=m_tm9tcYV_PLCiSj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <iframe width="560" height="315"
+            src="https://www.youtube.com/embed/Lm94VMX22G4?si=hSH-jCC47FHG9vZu"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+          </iframe>
         </div>
 
-        <div class="video-wrapper">
-          <h2 class="video-title">The Godfathers</h2>
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/LEDjrc4yzWM?si=Fgt1m_JgkWsqvpK1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
+        <!-- Прев’ю -->
+        <div class="video-thumbnails">
+          <div class="thumbnail active" data-video="https://www.youtube.com/embed/Lm94VMX22G4" data-title="Crazy Flight">
+            <img src="https://img.youtube.com/vi/Lm94VMX22G4/hqdefault.jpg" alt="Crazy Flight thumbnail">
+            <p>Crazy Flight</p>
+          </div>
 
-        <div class="video-wrapper">
-          <h2 class="video-title">America's Got Talent</h2>
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/RRqXB_vuDwc?si=xCpBOqRSyBVGj1As" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
+          <div class="thumbnail" data-video="https://www.youtube.com/embed/LEDjrc4yzWM" data-title="The Godfathers">
+            <img src="https://img.youtube.com/vi/LEDjrc4yzWM/hqdefault.jpg" alt="The Godfathers thumbnail">
+            <p>The Godfathers</p>
+          </div>
 
-        <!-- Навігація -->
-        <button class="carousel-btn prev">❮</button>
-        <button class="carousel-btn next">❯</button>
+          <div class="thumbnail" data-video="https://www.youtube.com/embed/RRqXB_vuDwc" data-title="America’s Got Talent">
+            <img src="https://img.youtube.com/vi/RRqXB_vuDwc/hqdefault.jpg" alt="America's Got Talent thumbnail">
+            <p>America’s Got Talent</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </main>
+

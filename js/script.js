@@ -1,11 +1,13 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const burger = document.getElementById("burger");
-    const menu = document.querySelector(".menu");
-    if (burger && menu) {
-      burger.addEventListener("click", () => {
-        burger.classList.toggle("active");
-        menu.classList.toggle("active");
-        document.body.classList.toggle("no-scroll");
-      });
-    }
-  });
+document.body.addEventListener('click', function(e) {
+  if(e.target.closest('.thumbnail')) {
+    const thumbnail = e.target.closest('.thumbnail');
+    const iframe = document.querySelector('.video-display iframe');
+    const title = document.querySelector('.video-title');
+
+    iframe.src = thumbnail.dataset.video + '?autoplay=1';
+    title.textContent = thumbnail.dataset.title;
+
+    document.querySelectorAll('.thumbnail').forEach(t => t.classList.remove('active'));
+    thumbnail.classList.add('active');
+  }
+});

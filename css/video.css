@@ -4,81 +4,87 @@
 @import url("main-container.css");
 
 .video-carousel {
-  position: relative;
-  overflow: hidden;
-  margin-bottom: 1.5rem;
-}
-
-.video-wrapper {
-  position: absolute;
-  inset: 0;
-  opacity: 0;
-  transform: scale(0.95);
-  transition: opacity 0.8s ease, transform 0.8s ease;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  gap: 1.5rem;
 }
 
-.video-wrapper.active {
-  opacity: 1;
-  transform: scale(1);
+.video-display {
   position: relative;
+  text-align: center;
+  width: 650px;
 }
 
 .video-title {
-  color: #9f3b32;
-  text-align: center;
+  color: #f0b035;
   margin-bottom: 1rem;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
-.video-wrapper iframe {
+.video-display iframe {
   width: 100%;
   max-width: 720px;
   height: 405px;
-  border-radius: 12px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 }
 
-/* Кнопки */
-.carousel-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: #9f3b32;;
-  color: #fff;
-  border: none;
-  font-size: 2rem;
+/* Прев’ю */
+.video-thumbnails {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.thumbnail {
+  width: 200px;
   cursor: pointer;
-  padding: 0.5rem 1rem;
-  border-radius: 50%;
-  transition: background 0.3s ease;
-  z-index: 10;
+  text-align: center;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0.8;
 }
 
-.carousel-btn:hover {
-  background: rgba(240, 176, 53, 0.9);
+.thumbnail img {
+  width: 100%;
+  border-radius: 12px;
+  border: 2px solid transparent;
+  transition: border-color 0.3s ease, transform 0.3s ease;
 }
 
-.carousel-btn.prev {
-  left: 20px;
+.thumbnail p {
+  margin-top: 0.5rem;
+  color: white;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
-.carousel-btn.next {
-  right: 20px;
+.thumbnail:hover {
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+.thumbnail.active img {
+  border-color: #f0b035;
+  transform: scale(1.08);
+  opacity: 1;
 }
 
 /* Адаптив */
 @media (max-width: 768px) {
-  .video-wrapper iframe {
-    width: 100%;
+  .video-display iframe {
     height: 220px;
+    max-width: 70%%;
+    
+    width: auto;
   }
 
-  .carousel-btn {
-    font-size: 1.5rem;
-    padding: 0.3rem 0.7rem;
+  .thumbnail {
+    width: 140px;
   }
 }
+
+
