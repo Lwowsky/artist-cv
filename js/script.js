@@ -1,3 +1,4 @@
+//video //
 document.body.addEventListener('click', function(e) {
   if(e.target.closest('.thumbnail')) {
     const thumbnail = e.target.closest('.thumbnail');
@@ -11,3 +12,6 @@ document.body.addEventListener('click', function(e) {
     thumbnail.classList.add('active');
   }
 });
+
+//carousel//
+
