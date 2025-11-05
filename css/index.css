@@ -97,22 +97,20 @@
   align-items: center;
   grid-template-rows: row;
  }
-.main-portfolio__review {
- li {
+.main-portfolio__review li {
   color: #9f3b32;
-  font-size: 15px;
+  font-size: 1.1rem;
   font-weight: bold;
-  }
- } 
+  list-style-type: none;
+} 
 
-.main-portfolio__review--right {
-  li {
-    font-size: 15px;
-    font-weight: bold;
-  }
+.main-portfolio__review--right li {
+  font-size: 1.1rem;
+  font-weight: bold;
+  list-style-type: none;  
 }
 
-.content-box li {
+.content-box {
   color: #333;
   line-height: 1.6;
   font-size: 1.1rem;
